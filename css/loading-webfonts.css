@@ -53,4 +53,5 @@ p.italic {
 
 p.bold {
   font-family: 'League Gothic Condensed';
+  font-weight: bold;
 }
