@@ -46,3 +46,7 @@ h1 {
 p {
   font-family: 'League Gothic';
 }
+
+p.italic {
+  font-style: italic;
+}
