@@ -26,7 +26,7 @@
 
 /* Condensed */
 @font-face {
-    font-family: 'League Gothic Condensed';
+    font-family: 'League Gothic';
     src: url('type/leaguegothic-condensed-regular-webfont.eot');
     src: url('type/leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('type/leaguegothic-condensed-regular-webfont.woff') format('woff'),
@@ -52,5 +52,4 @@ p.italic {
 }
 
 p.bold {
-  font-family: 'League Gothic Condensed';
 }
