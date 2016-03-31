@@ -50,3 +50,7 @@ p {
 p.italic {
   font-style: italic;
 }
+
+p.bold {
+  font-family: 'League Gothic Condensed';
+}
