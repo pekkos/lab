@@ -1,5 +1,79 @@
 
-.bodytext {
+.column.bodytext {
   column-width: 18em;
   column-gap: 2em;
+  column-rule: 2px dotted maroon;
+}
+
+.bodytext h1 {
+  column-span: all;
+}
+
+
+@supports (-webkit-initial-letter: 3) {
+  .bodytext p:first-of-type::first-letter {
+    -webkit-initial-letter: 3;
+    initial-letter: 3;
+    margin-top: 1em;
+    margin-right: .5em;
+    color: maroon;
+  }
+}
+
+/* Regions */
+
+.region.bodytext {
+  -webkit-flow-into: article-thread;
+}
+
+.article-regions {
+  -webkit-flow-from: article-thread;
+}
+
+.region1 {
+  background-color: #fad;
+  height: 10em;
+}
+
+.regionwrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.region2, .region3, .region4 {
+  flex: 1;
+  padding: 10px;
+  height: 10em;
+}
+
+.region3 {
+  background: #daf;
+}
+
+.region4 {
+  background: #fda;
+}
+
+.region5 {
+  padding: 10px;
+  background: pink;
+}
+
+
+.whitespace {
+  content: "";
+  display: block;
+  background: pink;
+  width: 0;
+  height: 0;
+}
+
+.left {
+  float: left;
+  border-top: 100px solid red;
+	border-right: 100px solid transparent;
+}
+
+.right {
+  float: right;
 }
