@@ -1,0 +1,26 @@
+:root {
+  --motion: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0;
+  }
+}
+
+a {
+  display: block;
+}
+
+p {
+  background: red;
+  color: white;
+  padding: .5em;
+  display: inline-block;
+  transition: transform .3s ease-in-out;
+  transition-duration: calc(var(--motion) * .3s);
+}
+
+a:hover + p {
+  transform: translateY(100px);
+}
