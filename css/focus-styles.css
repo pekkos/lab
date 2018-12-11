@@ -1,3 +1,5 @@
-h1 {
-    font-style: italic;
+
+a,
+button {
+    outline: 0;
 }
