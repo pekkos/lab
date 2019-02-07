@@ -1,5 +1,14 @@
 
-a,
-button {
+*:focus { 
     outline: 0;
+    box-shadow: 0 0 2px 4px lightgreen;
 }
+
+*:-moz-focusring {
+    border: 3px pink solid;
+}
+
+
+/* *:focus:not(:focus-visible) {
+    box-shadow: none;
+} */
