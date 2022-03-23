@@ -1,2 +1,11 @@
 @import "../assets/global.css";
 
+/* q {
+  quotes: '"' '"' "'" "'";
+} */
+blockquote::before {
+  content: open-quote;
+}
+blockquote::after {
+  content: close-quote;
+}
