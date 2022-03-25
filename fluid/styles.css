@@ -1,2 +1,123 @@
 @import "../assets/global.css";
 
+
+* {
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: inherit;
+	line-height: var(--leading-2);
+}
+
+* + * {
+	margin-top: var(--leading-2);
+}
+
+
+h1:not(* + h1),
+h2:not(* + h2),
+h3:not(* + h3),
+h4:not(* + h4),
+h5:not(* + h5),
+h6:not(* + h6) {
+    margin-top: 0;
+}
+
+/* h1,h2,h3,h4,h5,h6 {
+        background-color: rgba(0, 0, 200, 0.3);
+
+} */
+
+h1,
+.h1 {
+	font-size: var(--font-size-5);
+	line-height: var(--leading-3);
+}
+
+h2,
+.h2 {
+	font-size: var(--font-size-4);
+	line-height: var(--leading-3);
+}
+
+h3,
+.h3 {
+	font-size: var(--font-size-3);
+	line-height: var(--leading-2);
+}
+
+h4,
+.h4 {
+	font-size: var(--font-size-2);
+	line-height: var(--leading-2);
+}
+
+h5,
+.h5 {
+	font-size: var(--font-size-1);
+	line-height: var(--leading-2);
+}
+
+h6,
+.h6 {
+	font-size: var(--font-size-0);
+	line-height: var(--leading-2);
+}
+
+/* -------------------------------- */
+html {
+  font-size: 100%;
+  font-size: clamp(100%, 2vw, 112.5%);
+  line-height: var(--leading-2);
+}
+:root {
+  --font-size-8: calc(2.565784514rem + (4.5949729864 - 2.565784514) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-7: calc(2.2806973457rem + (3.7974983358 - 2.2806973457) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-6: calc(2.0272865295rem + (3.1384283767 - 2.0272865295) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-5: calc(1.8020324707rem + (2.5937424601 - 1.8020324707) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-4: calc(1.6018066406rem + (2.14358881 - 1.6018066406) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-3: calc(1.423828125rem + (1.771561 - 1.423828125) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-2: calc(1.265625rem + (1.4641 - 1.265625) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-1: calc(1.125rem + (1.21 - 1.125) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size-0: calc(1rem + (1 - 1) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size--1: calc(0.8888888889rem + (0.826446281 - 0.8888888889) * ((100vw - 20em) / (87.5 - 20)));
+  --font-size--2: calc(0.7901234568rem + (0.6830134554 - 0.7901234568) * ((100vw - 20em) / (87.5 - 20)));
+  --leading-root: calc((1.5rem + (1.7 - 1.5) * ((100vw - 20em) / (87.5 - 20))) / 2);
+  --leading-2: calc(2 * var(--leading-root));
+  --leading-3: calc(3 * var(--leading-root));
+  --leading-4: calc(4 * var(--leading-root));
+  --leading-5: calc(5 * var(--leading-root));
+  --leading-6: calc(6 * var(--leading-root));
+  --leading-7: calc(7 * var(--leading-root));
+  --leading-8: calc(8 * var(--leading-root));
+  --leading-9: calc(9 * var(--leading-root));
+  --leading-10: calc(10 * var(--leading-root));
+  --leading-11: calc(11 * var(--leading-root));
+  --leading-12: calc(12 * var(--leading-root));
+}
+
+@media (min-width: 87.5em) {
+  :root {
+    --font-size-8: 4.5949729864rem;
+    --font-size-7: 3.7974983358rem;
+    --font-size-6: 3.1384283767rem;
+    --font-size-5: 2.5937424601rem;
+    --font-size-4: 2.14358881rem;
+    --font-size-3: 1.771561rem;
+    --font-size-2: 1.4641rem;
+    --font-size-1: 1.21rem;
+    --font-size-0: 1rem;
+    --font-size--1: 0.826446281rem;
+    --font-size--2: 0.6830134554rem;
+    --leading-root: calc(1.7rem / 2);
+  }
+}
+/* @media (min-width: 20em) {
+  html {
+    font-size: calc(1rem + (18 - 16) * ((100vw - 20em) / (87.5 * 16 - 20 * 16)));
+  }
+}
+@media (min-width: 87.5em) {
+  html {
+    font-size: 112.5%;
+  }
+} */

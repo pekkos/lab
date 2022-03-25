@@ -9,9 +9,118 @@
 </head>
 
 <body>
-    <h1>Just for testing</h1>
 
-    <p>This <a href="https://lab.pekkos.com">lab.pekkos.com</a> site is served by <a href="https://lab-pekkos-com.netlify.app">Netlify</a> and hosted on <a href="https://github.com/pekkos/lab">GitHub</a>.</a></p>
+    <style>
+        .fluid-typography {
+            padding-top: calc(var(--leading-root) / 2);
+        }
+    
+        :checked~.fluid-typography {
+            background: linear-gradient(to bottom, #eee, #eee 50%, #fff 50%, #fff);
+            background-size: 100% calc(var(--leading-root) * 2);
+        }
+
+        hr {
+            height: 0.5px;
+            border: none;
+            background: rgb(0, 0, 0);
+        }
+
+        .smallprint {
+            font-size: var(--font-size--1);
+        }
+    
+        .smallerprint {
+            font-size: var(--font-size--2);
+        }
+        
+    </style>
+    
+    <label for="text-elements">Background stripes?&nbsp;</label>
+    <input type="checkbox" id="text-elements" checked />
+    <hr />
+    
+    <div class="fluid-typography">
+    
+        <h1 style="margin-top: 0; margin-bottom: 0">Heading level 1</h1>
+        <h2 style="margin-top: 0;">Heading level 2</h2>
+        <h3 style="margin-top: 0;">Heading level 3</h3>
+        <h4 style="margin-top: 0;">Heading level 4</h4>
+        <h5 style="margin-top: 0;">Heading level 5</h5>
+        <h6 style="margin-top: 0;">Heading level 6</h6>
+        <p style="margin-top: 0;">Regular body text</p>
+        <p style="margin-top: 0;" class="smallprint">Smaller body text</p>        
+        <p style="margin-top: 0;" class="smallerprint">Even smaller body text</p>
+
+        <h1>This is a level 1 heading </h1>
+        <p class="intro">An intro text leads the reader into the article. It should contrast to the body text in one or
+            the
+            other way. Perhaps bolder and at a bigger size nails it.</p>
+        <p>Regular body text is set in font-size 0, meaning that it's the 0 position in a modular scale. Lorem ipsum dolor
+            sit
+            amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer dolor.
+            Lorem
+            ipsum dolor sit amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum
+            consectetuer dolor.</p>
+    
+        <h2>Followed by a heading on level 2, which may at times be quite comprehensive</h2>
+        <p>Regular body text is set in font-size 0, meaning that it's the 0 position in a modular scale. Lorem ipsum dolor
+            sit
+            amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer dolor.
+            Lorem
+            ipsum dolor sit amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum
+            consectetuer dolor.</p>
+        <p>Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer dolor. Lorem
+            ipsum dolor sit amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum
+            consectetuer dolor.</p>
+    
+        <h2>Another level 2 heading, say what?</h2>
+        <p>Regular body text is set in font-size 0, meaning that it's the 0 position in a modular scale. Lorem ipsum dolor
+            sit
+            amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer dolor.
+            Lorem
+            ipsum dolor sit amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum
+            consectetuer dolor.</p>
+        <div class="example-block" style="background: rebeccapurple; width: 600px; opacity: 0.3; height: var(--leading-8);">
+        </div>
+        <p>Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer dolor. Lorem
+            ipsum dolor sit amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum
+            consectetuer dolor.</p>
+    
+        <h3>Headings may be level 3 too, which shouldn't come as a surprise</h3>
+        <p>Regular body text is set in font-size 0, meaning that it's the 0 position in a modular scale. Lorem ipsum dolor
+            sit
+            amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer dolor.
+            Lorem
+            ipsum dolor sit amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum
+            consectetuer dolor.</p>
+    
+        <h4>Some headings are even on the fourth level</h4>
+        <p>Regular body text is set in font-size 0, meaning that it's the 0 position in a modular scale. Lorem ipsum dolor
+            sit
+            amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer dolor.
+            Lorem
+            ipsum dolor sit amet adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum
+            consectetuer dolor.</p>
+    
+        <h5>Rare cases of heading level 5 may occur</h5>
+        <p>Regular body text is set in font-size 0. Lorem ipsum dolor sit amet adipiscing elit.</p>
+    
+        <h6>Headings on level 6 will likely not prevail</h6>
+        <p>Regular body text is set in font-size 0. Lorem ipsum dolor sit amet adipiscing elit.</p>
+    
+        <p class="smallprint">Sometimes smaller font sizes are needed. Just step down the modular scale
+            into negative space, use i.e. font-size -1. Lorem ipsum dolor sit amet
+            adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum</p>
+    
+        <p class="smallerprint">Want to go even smaller? Go ahead, but really, this is the smallest you may go with
+            a font-size
+            of -2 on the modular scale. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum consectetuer
+            dolor.
+            Lorem ipsum dolor sit amet
+            adipiscing elit. Consectetuer et utrum adpiscing nonummy donec at narpat lorem ipsum</p>
+    
+    </div>
 
     <script src="scripts.js"></script>
 </body>

@@ -1,0 +1,168 @@
+@import "../assets/global.css";
+
+
+/* =============================================================================
+ * Fluid font-sizes using modular scales
+ *
+ * position		scale 1.125			scale 1.25
+ *     8		1.125^8 =  2.5658	1.25^8 =  5.9605
+ *     7		1.125^7 =  2.2807	1.25^7 =  4.7684
+ *     6		1.125^6 =  2.0273	1.25^6 =  3.8147
+ *     5		1.125^5 =  1.802	1.25^5 =  3.0518
+ *     4		1.125^4 =  1.6018	1.25^4 =  2.4414
+ *     3		1.125^3 =  1.4238	1.25^3 =  1.9531
+ *     2		1.125^2 =  1.2656	1.25^2 =  1.5625
+ *     1		1.125^1 =  1.125	1.25^1 =  1.25
+ *     0				   1				  1
+ *    -1		1.125^-1 = 0.8889	1.25^-1 = 0.8
+ *    -2		1.125^-2 = 0.7901	1.25^-2 = 0.64
+ *
+ *
+ * 1. Max font-size taken from the browser @ 62.5em
+ *
+============================================================================= */
+
+:root {
+	--font-size-8: calc(2.5658rem + (4.595 - 2.5658) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-7: calc(2.2807rem + (3.7975 - 2.2807) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-6: calc(2.0273rem + (3.1384 - 2.0273) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-5: calc(1.802rem + (2.5937 - 1.802) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-4: calc(1.6018rem + (2.1436 - 1.6018) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-3: calc(1.4238rem + (1.7716 - 1.4238) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-2: calc(1.2656rem + (1.4641 - 1.2656) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-1: calc(1.125rem + (1.21 - 1.125) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size-0: calc(1rem + (1 - 1) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size--1: calc(0.8889rem + (0.8264 - 0.8889) * ((100vw - 20em) / (87.5 - 20)));
+	--font-size--2: calc(0.7901rem + (0.683 - 0.7901) * ((100vw - 20em) / (87.5 - 20)));
+}
+
+
+@media (min-width: 62.5em) {
+
+	:root {
+		--font-size-8: 64.5px; /* 1. */
+		--font-size-7: 54.5833px; /* 1. */
+		--font-size-6: 41.2167px; /* 1. */
+		--font-size-5: 39.2px; /* 1. */
+		--font-size-4: 33.2833px; /* 1. */
+		--font-size-3: 28.3px; /* 1. */
+		--font-size-2: 24.1px; /* 1. */
+		--font-size-1: 20.5333px; /* 1. */
+		--font-size-0: 17.5333px; /* 1. */
+		--font-size--1: 15px; /* 1. */
+		--font-size--2: 12.8333px; /* 1. */
+	}
+}
+
+
+
+/* =============================================================================
+ * Fluid sizes for leading
+ *
+ * In order to place all things on a vertical grid, use this set of leadings
+ * when stacking things vertically
+ *
+ * 1. The root value is half the actual line-height, ensuring more granularity
+============================================================================= */
+
+:root {
+	--leading-root: calc((1.5rem + (1.7 - 1.5) * ((100vw - 20rem) / (87.5 - 20))) / 2);
+	--leading-1_5: calc(1.5 * var(--leading-root));
+	--leading-2: calc(2 * var(--leading-root));
+	--leading-3: calc(3 * var(--leading-root));
+	--leading-4: calc(4 * var(--leading-root));
+	--leading-4_5: calc(4.5 * var(--leading-root));
+	--leading-5: calc(5 * var(--leading-root));
+	--leading-6: calc(6 * var(--leading-root));
+	--leading-7: calc(7 * var(--leading-root));
+	--leading-8: calc(8 * var(--leading-root));
+	--leading-10: calc(10 * var(--leading-root));
+	--leading-12: calc(12 * var(--leading-root));
+}
+
+
+@media (min-width: 62.5em) {
+
+	:root {
+		--leading-root: 14.1px;
+	}
+}
+
+
+
+/* =============================================================================
+ * Fluid sizes for spacing and sizing
+ *
+ * Use negative spacing to pull something out of the grid and alignment
+ *
+ * 1. Max size taken from the browser @ 75em (px value / 20 => rem value)
+============================================================================= */
+
+:root {
+	--size-quarter: calc(0.125rem + (0.25 - 0.125) * ((100vw - 20em) / (75 - 20)));
+	--size-half: calc(0.25rem + (0.5 - 0.25) * ((100vw - 20em) / (75 - 20)));
+	--size-full: calc(0.5rem + (1 - 0.5) * ((100vw - 20em) / (75 - 20)));
+	--size-double: calc(1rem + (2 - 1) * ((100vw - 20em) / (75 - 20)));
+	--size-quad: calc(2rem + (4 - 2) * ((100vw - 20em) / (75 - 20)));
+	--size-octo: calc(4rem + (8 - 4) * ((100vw - 20em) / (75 - 20)));
+	--size--quarter: calc(-0.125rem - (0.25 - 0.125) * ((100vw - 20em) / (75 - 20)));
+	--size--half: calc(-0.25rem - (0.5 - 0.25) * ((100vw - 20em) / (75 - 20)));
+	--size--full: calc(-0.5rem - (1 - 0.5) * ((100vw - 20em) / (75 - 20)));
+	--size--double: calc(-1rem - (2 - 1) * ((100vw - 20em) / (75 - 20)));
+	--size--quad: calc(-2rem - (4 - 2) * ((100vw - 20em) / (75 - 20)));
+	--size--octo: calc(-4rem - (8 - 4) * ((100vw - 20em) / (75 - 20)));
+}
+
+@media (min-width: 75em) {
+
+	:root {
+		--size-quarter: 0.2308rem; /* 1 */
+		--size-half: 0.4615rem; /* 1 */
+		--size-full: 0.9231rem; /* 1 */
+		--size-double: 1.848rem; /* 1 */
+		--size-quad: 3.696rem; /* 1 */
+		--size-octo: 7.3939rem; /* 1 */
+		--size--quarter: -0.2308rem; /* 1 */
+		--size--half: -0.4615rem; /* 1 */
+		--size--full: -0.9231rem; /* 1 */
+		--size--double: -1.848rem; /* 1 */
+		--size--quad: -3.696rem; /* 1 */
+		--size--octo: -7.3939rem; /* 1 */
+	}
+}
+
+
+
+
+html {
+	min-height: 0.001vw; /* 4. */
+	background: var(--color-white);
+	background: var(--context-color-page-background);
+	color: var(--color-gray-dark);
+	color: var(--context-color-text);
+	font-family: Source Sans Pro, Helvetica, sans-serif;
+	font-size: 100%; /* 3. */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+	html {
+		scroll-behavior: smooth; /* 8. */
+	}
+}
+
+
+
+@media (min-width: 20em) {
+
+	html {
+		font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1200 - 320))); /* 5. */
+	}
+}
+
+@media (min-width: 75em) {
+
+	html {
+		font-size: 113%; /* 6. */
+	}
+}
