@@ -3,9 +3,25 @@
 /* q {
   quotes: '"' '"' "'" "'";
 } */
-blockquote::before {
+blockquote p::before {
   content: open-quote;
 }
-blockquote::after {
+blockquote p::after {
   content: close-quote;
+}
+
+blockquote:has(p) {
+  background: pink;
+}
+
+cite {
+  font-style: inherit;
+}
+
+cite::before {
+  content: open-quote;
+}
+
+cite::after {
+  content: close-quote
 }

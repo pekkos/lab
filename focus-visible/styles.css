@@ -1,0 +1,40 @@
+@import "../assets/global.css";
+
+button, input, select {
+    border-width: initial;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+    outline: 2px solid hotpink;
+    box-shadow: 0 0 0 8px rgb(78, 245, 192);
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+
+.styled {
+    background: rebeccapurple;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+/* :is(a, button, input, textarea, select, summary) {
+    --outline-size: max(2px, 0.08em);
+    --outline-style: solid;
+    --outline-color: currentColor;
+}
+
+:is(a, button, input, textarea, select, summary):focus {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+} */

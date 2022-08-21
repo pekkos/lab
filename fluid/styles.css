@@ -111,6 +111,7 @@ html {
     --leading-root: calc(1.7rem / 2);
   }
 }
+
 /* @media (min-width: 20em) {
   html {
     font-size: calc(1rem + (18 - 16) * ((100vw - 20em) / (87.5 * 16 - 20 * 16)));
@@ -120,4 +121,103 @@ html {
   html {
     font-size: 112.5%;
   }
+} */
+
+
+
+
+
+
+/* SCSS */
+
+/* @use "sass:selector";
+@use "sass:map";
+
+@mixin fluid-type(
+    $neg-step: 2,
+    $pos-step: 8,
+    $min-scale: 1.1,
+    $max-scale: 1.2,
+    $min-bp: 20,
+    $max-bp: 87.5,
+    $min-font-size: 16,
+    $max-font-size: 18,
+    $font-size-threshold: 2vw,
+    $min-leading: 1.5,
+    $max-leading: 1.7,
+    $leading-step: 12
+  ) {
+
+    $min-scale-values: ();  
+    $max-scale-values: ();  
+    @if $pos-step > 0 {
+        $min-scale-step: 1;
+        $max-scale-step: 1;
+        @for $i from 0 through $pos-step {
+            $min-scale-values: map.set($min-scale-values, $i, $min-scale-step);
+            $max-scale-values: map.set($max-scale-values, $i, $max-scale-step);
+            $min-scale-step: $min-scale-step * $min-scale;
+            $max-scale-step: $max-scale-step * $max-scale;
+        }
+    }
+    @if $neg-step > 0 {
+        $min-scale-step: 1;
+        $max-scale-step: 1;
+        @for $i from 0 through -1 * $neg-step {
+            @if $i < 0 {
+                $min-scale-step: $min-scale-step / $min-scale;
+                $max-scale-step: $max-scale-step / $max-scale;
+                $min-scale-values: map.set($min-scale-values, $i, $min-scale-step);
+                $max-scale-values: map.set($max-scale-values, $i, $max-scale-step);
+            }
+        }
+    }
+  
+  @at-root :root {
+      @for $i from $pos-step through -1 * $neg-step {
+        --font-size-#{$i}: calc(#{map.get($min-scale-values, $i)}rem + (#{map.get($max-scale-values, $i)} - #{map.get($min-scale-values, $i)}) * ((100vw - #{$min-bp}em) / (#{$max-bp} - #{$min-bp})));
+      }
+      
+      --leading-root: calc((#{$min-leading}rem + (#{$max-leading} - #{$min-leading}) * ((100vw - #{$min-bp}em) / (#{$max-bp} - #{$min-bp}))) / 2);
+      @for $i from 2 through $leading-step {
+          --leading-#{$i}: calc(#{$i} * var(--leading-root));
+      }
+  }
+  
+  @at-root {
+      @media (min-width: #{$max-bp}em) {
+            :root {
+                @for $i from $pos-step through -1 * $neg-step {
+                    --font-size-#{$i}: #{map.get($max-scale-values, $i)}rem;
+                }
+                --leading-root: calc(#{$max-leading}rem / 2);
+            }
+      }
+  }
+  
+  font-size: 100%;
+  $font-size-max: $max-font-size / $min-font-size * 100%;
+  font-size: clamp(100%, #{$font-size-threshold}, #{$font-size-max});
+  line-height: var(--leading-2);
+      
+} */
+
+
+/* -------------------------------- */
+
+/* html {
+    @include fluid-type(
+        $neg-step: 2,               /* font size positions below 0 (smaller than body text) * /
+        $pos-step: 8,               /* font size positoins above 0 (larger than body text) * /
+        $min-scale: 1.125,          /* modular scale at min breakpoint * /
+        $max-scale: 1.21,           /* modular scale at max breakpoint * /
+        $min-bp: 20,                /* em => width / 16* /
+        $max-bp: 87.5,              /* em => width / 16* /
+        $min-font-size: 16,         /* px * /
+        $max-font-size: 18,         /* px * /
+        $font-size-threshold: 2vw,  /* where font-size starts to grow * /
+        $min-leading: 1.5,          /* line-height at min breakpoint * /
+        $max-leading: 1.7,          /* line-height at max breakpoint * /
+        $leading-step: 12           /* number of leading steps/sizes * /
+    )
 } */
