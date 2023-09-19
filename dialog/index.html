@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<div>
+    <h1>
+        No focusable element test
+    </h1>
+    <p>
+        <strong>This test only works in browsers that have implemented the dialog element (and if necessary, a flag has
+            been turned on to have it render)</strong>.
+    </p>
+    <p>
+        This test is to show what happens if a dialog element has no focusable content, but focus is set to the dialog
+        itself (using "invalid" tabindex=-1 on the dialog)
+    </p>
+
+
+    <p>
+        <button onclick="showDialog(myDialog)">
+            Open my dialog!
+        </button>
+    </p>
+
+    <p>
+        <button onclick="showDialog(myOtherDialog)">
+            Open long dialog!
+        </button>
+    </p>
+
+    <dialog id="my_dialog" tabindex=-1>
+        <h1>My heading</h1>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+    </dialog>
+
+    <dialog id="my_other_dialog" tabindex=-1>
+        <button>A button</button>
+        <h1>My heading</h1>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+        <p>
+            Nothing to focus here
+        </p>
+        <p>
+            Nothing to focus at all.
+        </p>
+    </dialog>
+
+
+
+    <h2>Results</h2>
+    <p>With <strong>Firefox and Chromium browsers paired with JAWS</strong>, either the heading will be announced, or
+        the focused dialog will announce as "modal dialog". Pressing down arrow will begin announcing the content of the
+        dialog. The heading can be skipped over by JAWS, but that seems something JAWS should fix.
+    <p>
+        <strong>Narrator with Edge</strong> will announce "modal dialog" when focusing the dialog element. For the long
+        dialog test, Narrator will beging reading the contents of the dialog from start to end.
+    <p>
+        <strong>Firefox and Chromium browsers</strong> with NVDA will start announcing the content of the dialog from
+        start to finish.
+
+    <p>
+        <strong>Safari Tech Preview and VoiceOver</strong> will immediately push VO focus to the heading of the dialog,
+        announcing its contents and however many other items are in the "group" (odd to not say dialog... but looking in
+        Safari's dev tools Node pannel > Accessibility, the dialog presently returns "no matching ARIA role", so maybe
+        that's why?)
+
+        <hr>
+
+    <p>You can also check out <a href="https://scottaohara.github.io/testing/html-dialog/just-dialog.html">this dialog
+            comparison test</a> for different behaviors when a focusable element or the dialog element itself is
+        initially focused.</p>
+
+
+</div>
+
+    
+    <script src="scripts.js"></script>
+</body>
+
+</html>
