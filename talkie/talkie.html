@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Talkie</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>Just for testing</h1>
+
+    <p>This <a href="https://lab.pekkos.com">lab.pekkos.com</a> site is served by <a href="https://lab-pekkos-com.netlify.app">Netlify</a> and hosted on <a href="https://github.com/pekkos/lab">GitHub</a>.</a></p>
+
+    <script src="scripts.js"></script>
+
+    <div role="region" aria-label="Chatta med oss">
+
+<a href='linkhref.html' id='mylink'>Click to Chat!</a>
+<script type="text/javascript">
+    var myLink = document.getElementById('mylink');
+
+    myLink.onclick = function() {
+
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://app.talkie.se/chat-widget/34jRMTAunPLz134256811712rGkucUwS.js"; 
+        document.getElementsByTagName("body")[0].appendChild(script);
+        return false;
+    }
+</script>
+    </div>
+</body>
+
+</html>
