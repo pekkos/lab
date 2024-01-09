@@ -15,7 +15,7 @@
 
     <script src="scripts.js"></script>
 
-    <div role="region" aria-label="Chatta med oss">
+    <div id="chat" role="region" aria-label="Chatta med oss">
 
 <a href='linkhref.html' id='mylink'>Click to Chat!</a>
 <script type="text/javascript">
@@ -26,7 +26,7 @@
         var script = document.createElement("script");
         script.type = "text/javascript";
         script.src = "https://app.talkie.se/chat-widget/34jRMTAunPLz134256811712rGkucUwS.js"; 
-        document.getElementsByTagName("body")[0].appendChild(script);
+        document.querySelector('#chat')[0].appendChild(script);
         return false;
     }
 </script>
