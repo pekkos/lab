@@ -17,19 +17,21 @@
 
     <div id="chat" role="region" aria-label="Chatta med oss">
 
-<a href='linkhref.html' id='mylink'>Click to Chat!</a>
-<script type="text/javascript">
-    var myLink = document.getElementById('mylink');
+        <a href='linkhref.html' id='mylink'>Click to Chat!</a>
+        <script type="text/javascript">
+            var myLink = document.getElementById('mylink');
 
-    myLink.onclick = function() {
+            myLink.onclick = function(e) {
 
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src = "https://app.talkie.se/chat-widget/34jRMTAunPLz134256811712rGkucUwS.js"; 
-        document.querySelector('#chat')[0].appendChild(script);
-        return false;
-    }
-</script>
+                e.preventDefault;
+
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "https://app.talkie.se/chat-widget/34jRMTAunPLz134256811712rGkucUwS.js"; 
+                document.querySelector('#chat')[0].appendChild(script);
+                return false;
+            }
+        </script>
     </div>
 </body>
 
